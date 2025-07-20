@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KKI SKINCARE Offical website : skincare</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="..\icon\sangam.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="finalproj.js" defer></script>
+
+
+
+</head>
+<body bgcolor="gray">
+
+
+    <header id="mainHeader">
+        <!--Left icons + hamburger + side panel-->
+        <div class="left-icons">
+            <button class="openbtn" onclick="openNav()">
+                <b>☰</b>
+            </button>        
+                <div id="mySidepanel" class="sidepanel">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                        ×
+                    </a>   
+                    
+                    <div class="dropdown">
+                        <input type="checkbox" id="toggle-New" class="dropdown-toggle">
+                        <label for="toggle-New" class="dropdown-btn">
+                            Discover<span class="arrow">&#9662;</span>
+                        </label>
+                        <div class="dropdown-menu">
+                            <a href="Gallery.html">Trending!</a>
+                            <a href="About.html">About Us</a>
+                            <a href="contact.html">Contact Us</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown">
+                        <input type="checkbox" id="toggle-services" class="dropdown-toggle">
+                        <label for="toggle-services" class="dropdown-btn">
+                            Skin Care <span class="arrow">&#9662;</span>
+                        </label>
+                        <div class="dropdown-menu">
+                                <a href="#">body</a>
+                            <a href="#">face</a>
+                            <a href="Nature.html">Green Tea</a>
+                            <a href="volcanic.html">Volcanic pore</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <input type="checkbox" id="toggle-products" class="dropdown-toggle">
+                        <label for="toggle-products" class="dropdown-btn">
+                            Hair <span class="arrow">&#9662;</span>
+                        </label>
+                        <div class="dropdown-menu">
+                            <a href="#">Shampoo</a>
+                            <a href="#">Mask</a>
+                            <a href="#">Conditioner</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <input type="checkbox" id="toggle-Fragrance" class="dropdown-toggle">
+                        <label for="toggle-Fragrance" class="dropdown-btn">
+                            Fragrance<span class="arrow">&#9662;</span>
+                        </label>
+                        <div class="dropdown-menu">
+                            <a href="#">Women</a>
+                            <a href="#">Men</a>
+                        </div>
+                    </div> 
+
+                    <div class="dropdown">
+                        <input type="checkbox" id="toggle-account" class="dropdown-toggle">
+                        <label for="toggle-account" class="dropdown-btn">
+                            Account<span class="arrow">&#9662;</span>
+                        </label>
+                        <div class="dropdown-menu">
+                            <a href="log_in.html">Login</a>
+                            <a href="register.html">Register</a>
+                            <a href="Merch.html">Rewards</a>
+                        </div>
+                    </div> 
+                </div>
+                <!--Search icon-->
+                <div class="search-toggle">
+                    <input type="checkbox" id="toggle-search" hidden>
+                    <label for="toggle-search" class="search-icon">
+                        <i class="fa fa-search left-search"></i>
+                    </label>
+                    <input type="text" class="search-input" placeholder="Search...">
+                </div>    
+        </div>
+            <!--middle header-->        
+            <h1 class="logo"><a href="index.html">KIKI</a></h1>
+            <!--RIght icon header-->
+            <div class="right-icons">
+                <a href="#"class='fa fa-heart'></a>
+                <a href="Cart.html" class="fa fa-shopping-cart"></a>
+                <a href="log_in.html"class='fa fa-user-circle-o profile-icon'></a>
+            </div>
+    </header>
+
+    
+<!--Nav bar below the header-->
+    <nav class="nav">
+        <ul class="textbar">
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <a href="About.html">About Us</a>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="index.html#contact">contact</a>                       
+                        <a href="contact.html">Enquire Online</a>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <a href="#">Skin Care</a>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">body</a>
+                        <a href="#">face</a>
+                        <a href="Nature.html">Green Tea</a>
+                        <a href="volcanic.html">Volcanic pore</a>
+                    </div>
+                </div>
+            </li>
+
+            
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <a href="#">Hair</a>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Shampoo</a>
+                        <a href="#">Mask</a>
+                        <a href="#">Conditioner</a>
+                    </div>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <a href="#">Fragrance</a>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Women</a>
+                        <a href="#">Men</a>
+                    </div>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <a href="#">Discover</a>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="Gallery.html">Trending</a>
+                        <a href="Merch.html">Merch</a>
+                    </div>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <a href="#">Rewards</a>
+                    </button>           
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+
+    <section class="team">
+        <h2 style="color: white;">About The Brand</h2>
+        <div class="team-members">
+        <div class="member">
+            <img src="website foto/uni piggy.jpg" alt="Founder">
+            <h3>Unisha Gurung</h3>
+            <p>Founder, Artist, Creative Director</p>
+        </div>
+        <div class="member">
+            <img src="website foto/sangam pangam.jpg" alt="Co-Founder">
+            <h3>Sangam Sunuwar</h3>
+            <p>Co-Founder, the only investor, The Most handsome man in the world </p>
+        </div>
+        </div>
+    </section>
+
+  <section class="about-section">
+    <h2>About Us</h2>
+    <p>At <strong>[Your Brand Name]</strong>, we believe skincare should be a quiet ritual of self-respect — a return to nature and to yourself.</p>
+    
+    <p>Born from a desire to reconnect with the earth’s purest elements, our products are inspired by the gentle power of botanicals, the healing rhythm of nature, and the beauty found in simplicity. Every formula is crafted with intention: clean ingredients, mindful sourcing, and skin-loving benefits that go deeper than the surface.</p>
+    
+    <p>We don’t chase trends — we create timeless care. From forest-born serums to petal-soft lotions, each product is a blend of <em>science-backed botanicals and sensory experience</em>, made to nourish both skin and soul.</p>
+
+    <ul>
+      <li><strong>Clean formulas</strong> – no harsh chemicals, ever</li>
+      <li><strong>Nature-led</strong> – ingredients with purpose and purity</li>
+      <li><strong>Minimal & effective</strong> – skincare that lets your skin breathe</li>
+      <li><strong>Cruelty-free & kind</strong> – always tested on humans, never on animals</li>
+    </ul>
+
+    <p>This is skincare that slows you down. That makes space. That feels like breathing in the forest after the rain.</p>
+
+    <p><strong>Welcome to [Your Brand Name]. Your skin’s sanctuary.</strong></p>
+  </section>
+
+    <div class="contact" id="contact">
+        
+
+                <center>
+                    <h3>Sign up for updates:</h3>           
+                    <input class="email" type="email" name="email" placeholder=" email">
+                    <button class="submit" >submit</button>
+                </center>
+                <br>    
+
+        <footer class="sub-footer">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                <li><a href="#">Email: info@kiki.com</a></li>
+                <li>Phone: +977 9701612034</li>
+                <li>Address: thapathali 44600, KTM</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Online Services</h3>
+                <ul>
+                <li><a href="#">Order Tracking</a></li>
+                <li><a href="#">Gift Cards</a></li>
+                <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Boutique Services</h3>
+                <ul>
+                <li><a href="#">Store Locator</a></li>
+                <li><a href="#">Makeup Consultations</a></li>
+                <li><a href="#">In-Store Events</a></li>
+                </ul>
+            </div>
+
+            <div class="socials">
+                <a href="https://www.instagram.com/" class="fa fa-instagram"></a>&nbsp; &nbsp;
+                <a href="https://www.facebook.com/" class="fa fa-facebook-f"></a>&nbsp; &nbsp;
+                <a href="https://x.com/?lang=en" class="fa fa-twitter"></a>&nbsp; &nbsp;
+            </div>   
+
+        </footer>
+
+    </div>
+
+
+<!--F0oter-->
+    <footer>
+        &copy; &#8226; copyrights &#8226; 2025 &#8226; Unisha Gurung &#8226; KIKI
+    </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,916 @@
+/* This is used for all the pages. */
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* Body css. */
+body{
+  margin: 0;
+}
+
+a{
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1; 
+}
+
+header a{
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+header.scrolled {
+  background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional shadow */
+}
+
+
+
+/*Search bar*/
+.search-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 5px;
+}
+
+.search-icon {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.search-input {
+  display: none;
+  padding: 6px 10px;
+  font-size: 10px;
+  border: 1px solid #ccc;
+
+}
+
+#toggle-search:checked ~ .search-input {
+  display: inline-block;
+  border-radius: 50px;
+}
+
+
+
+/* Left side: hamburger + close */
+.left-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hamburger, .close-btn {
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: black;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+
+
+/* Center title */
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo a {
+  color: black;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+/* Right side: icons */
+.right-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.right-icons a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/*hover effect */
+.right-icons a:hover {
+  color: #ccc;
+}
+
+
+
+/* mobile size screen */
+.sidepanel {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.9;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  font-size: 40px;
+  color: white;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  display: block;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+
+
+/* inside side panel, Dropdown container */
+.dropdown {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Hide checkbox */
+.dropdown-toggle {
+  display: none;
+}
+
+/* dropdown in side panel, Button label */
+.dropdown-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* Arrow */
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+
+
+/* Dropdown content of side panel */
+.dropdown-menu {
+  display: none;
+  position: relative; /* not absolute so it pushes content down */
+  width: 100%;
+  background-color: #222;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 14px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #444;
+}
+
+/* Show menu when checked */
+.dropdown-toggle:checked + .dropdown-btn + .dropdown-menu {
+  display: block;
+}
+
+/* Rotate arrow */
+.dropdown-toggle:checked + .dropdown-btn .arrow {
+  transform: rotate(-180deg);
+}
+
+
+/*screen size*/
+@media only screen and (max-width: 1000px) {
+.nav, .profile-icon{
+  display: none;
+}
+  
+}
+
+@media screen and (min-width: 1001px) {
+  .topnav {
+    display: flex;
+    justify-content: center; 
+    background-color: #111;
+  }
+
+  .topnav a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 14px 20px;
+  }
+
+  .topnav a:hover {
+    background-color: #575757;
+  }
+
+  .sidepanel, .openbtn {
+    display: none;
+  }
+}
+
+/* This is the navigation bar. */
+.textbar{
+    transition: 0.5s;
+
+  }
+
+nav{
+  position: fixed;
+  top: auto;
+  width: 100%;
+  background: #A9A9A9;
+  z-index: 10;
+}
+
+.textbar{
+    display: flex;
+    background-color: #A9A9A9;
+    padding: 0;
+    font-size: 10px;
+    border: none;
+}
+
+nav ul li{
+    margin: none;
+    padding: none;
+    list-style-type: none;
+    background-color: #A9A9A9;
+    width: 100%;
+    text-align: center;
+}
+
+nav li a{
+    display: block;
+    text-align: center;
+    float: center;
+    padding: auto;
+    background-color: #A9A9A9;
+    text-decoration: none;
+
+}
+
+
+
+/* Navigation bar dropdown. */
+.dropbtn{
+    background-color: #A9A9A9;
+    color: black;
+    padding: 5px;
+    font-size: 14px;
+    border: none;
+    text-align: center
+    
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.dropdown-content{
+    display: none;
+    position: relative;
+    font-size: 12px;
+    z-index: 100;  
+}
+
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: 1s;
+}
+
+.dropdown-content a:hover{
+    color: white;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown:hover .dropbtn{
+    background-color: #A9A9A9
+;
+}
+
+
+
+
+
+/*heading after slideshow
+.indexhead img{
+  display: block;
+  margin: auto;
+  width: 50%;;
+  height: auto;
+}
+*/
+
+/*before footer aka subfooter*/
+
+.email{
+  border-radius:10px;
+  border: 0px; 
+  font-size: large
+}
+
+.submit{
+    border: 1px solid black;
+    padding: 5px;
+    color: white;
+    background-color: #A9A9A9;
+    text-align: center;
+    cursor: pointer;
+    width: 75px;
+    font-size: 12px;
+    border-radius: 10px;
+}
+
+.contact{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding-top: 25px;
+    padding-bottom: 50px;    
+}
+
+.contact a{
+    text-decoration: none;
+}
+
+.socials {
+  margin-top: 75px;
+  text-align: center;
+  
+}
+
+.socials a {
+  color: #ccc;
+  font-size: 20px;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  color: #fff;
+}
+
+/*this is the contact, Online services and Socials*/
+.sub-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: black;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: sans-serif;
+  width: 100%;
+}
+
+.footer-section {
+  flex: 1 1 300px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #dbe9f4;
+}
+
+
+.footer-section li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+/* Responsive for small screens in footer ma */
+@media (max-width: 768px) {
+  .sub-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+}
+
+
+/* this is the footer. */
+footer{
+    background-color: #111;
+    width: 100%;
+    height: 50%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 50px;
+    text-align: center;
+    color: white;
+}
+
+
+
+/* yo slidehsow ko (Index.html)*/
+.css-slideshow {
+  position: relative;
+  width: 100%;
+  margin: 100px auto 0;
+  height: 500px; 
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fade 8s infinite;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Assign different delays to each slide */
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+.slide:nth-child(2) {
+  animation-delay: 4s;
+}
+
+/* Fade keyframes */
+@keyframes fade {
+  0%   { opacity: 0; }
+  10%  { opacity: 1; }
+  45%  { opacity: 1; }
+  55%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
+
+/* this is for product display. (index.html and Gallery.html) */
+.clearfix:after{
+    content: "";
+    clear: both;
+    display: table;
+    padding-bottom: 50px;
+}
+
+.row{
+  padding: 0 4px;
+  float: left;
+  width: 25%;
+}
+
+@media only screen and (max-width: 750px) {
+  .row {
+    width: 48.9999%;
+    margin: 4px 0;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .row {
+    width: 100%;
+    margin: 4px 0;
+  }
+}
+
+.column img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: center;
+    width:  200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.column:hover{
+    transform: scale(1.05);
+    border-radius: 5px;
+    background-color: light#A9A9A9
+;
+    opacity: 0.7;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+  background-color: transparent;
+  color: white;
+}
+
+.row button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.row button:hover {
+  opacity: 0.7;
+}
+
+
+/* this is for the for in Contact.html*/
+input[type=text], select, textarea {
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 16px;
+resize: vertical;
+}
+
+input[type=submit] {
+background-color: transparent;
+color: white;
+padding: 12px 20px;
+border: 1px solid black;
+border-radius: 5px;
+cursor: pointer;
+width: 100%;
+}
+
+input[type=submit]:hover {
+background-color: white;
+color: black;
+}
+
+.contact-container {
+border-radius: 5px;
+background-color: lightgray;
+padding: 20px;
+opacity: 0.8;
+width: 50%;
+margin: 20px auto 0;
+}
+
+
+/*this is for the register page N sign in page. i am goning insane atp.*/
+form {
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+}
+
+.container {
+    padding: 16px;
+    background-color: lightgray;
+    opacity: 0.8;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    margin: 20px auto 0;
+
+}
+
+
+input[type=emailregister], input[type=password] {
+  width: 100%;
+  padding: 16px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+
+.registerbtn {
+  background-color: #FFB6C1;
+  color: black;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+  background-color: white;
+
+}
+
+.container a {
+  color: dodgerblue;
+
+}
+
+.signinorcreate {
+  background-color: #f1f1f1;
+  text-align: center;
+  width: 90%;
+}
+
+
+.signin{
+  background-color: #FFB6C1;
+  color: black;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.signin:hover {
+  opacity: 1;
+  background-color: white;
+
+}
+
+.space{
+    margin: 100px auto 0;
+}
+
+/*product1.html*/
+.prodclearfix {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 20px;
+}
+
+.prodclick {
+  width: 25%;
+  height: auto;
+  object-fit: cover;
+}
+
+.prod1 {
+  flex: 1;
+  background-color: darkgray; 
+  padding: 20px;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  font-size: 16px;
+  line-height: 1.5;
+
+}
+
+.prod1 button {
+  margin-top: 10px;
+  padding: 14px 28px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 24px;
+  opacity: 0.7;
+}
+
+.prod1 button:hover {
+  background-color: black;
+  opacity: 1;
+  
+}
+
+.prod1 p{
+  font-size: 20px;
+  text-align: left;
+}
+
+.proddetail{
+  font-size: 20px;
+  text-align: left;
+}
+
+
+/*this is for About.html*/
+.team {
+  padding: 60px;
+  text-align: center;
+}
+.team h2 {
+  font-size: 34px;
+  margin-bottom: 40px;
+}
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.member {
+  background-color: #3e664d;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 0 10px #000;
+}
+.member img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.member h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.member p {
+  color: white;
+}
+
+/*This is for About Us section in About.html*/
+.about-section {
+  max-width: 100%;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.about-section h2 {
+  font-size: 2em;
+  color: #3e664d;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.about-section ul {
+  padding: 0;
+}
+
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 20px;
+  }
+
+  .about-section h2 {
+    font-size: 1.5em;
+  }
+}
+
+
+/*this is for cart.html*/
+.cart-container {
+  max-width: 800px;
+  margin: 100px auto 0;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h2 {
+  text-align: center;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
+}
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.cart-details {
+  flex: 2;
+  padding: 0 15px;
+}
+.cart-price, .cart-qty {
+  flex: 1;
+  text-align: center;
+}
+.qty-input {
+  width: 40px;
+  text-align: center;
+}
+.cart-total {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.checkout-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 30px;
+  background-color: #e6b8b7;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.checkout-btn:hover {
+  background-color: #d19c9c;
+}
